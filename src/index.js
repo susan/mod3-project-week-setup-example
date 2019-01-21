@@ -40,10 +40,9 @@
         	let oceanId = event.target.dataset.id
 
       	  fetch(seaLifeURL)
-          .then(function(response){
-          return response.json();
-          })
-          .then(function(data){
+          .then(r=> r.json())
+
+          .then(data => {
           let filtered = data.filter(function(element){
              return element.oceanId === parseInt(oceanId)
            })
@@ -79,10 +78,8 @@
              body: JSON.stringify(opts)
            })
 
-          .then(function(response){
-             return response.json();
-          })
-          .then(function(data){
+          .then(r=> r.json())
+          .then(data => {
              renderSeaLife(seaLifeContainer, data);
              textButton(event.target, data)
           })
