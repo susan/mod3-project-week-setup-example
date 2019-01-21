@@ -15,24 +15,22 @@
     const oceansURL = "http://localhost:3000/oceans"
 
     //fetches here
-    fetch(seaLifeURL)
-    .then(function(response){
-    	return response.json()
-    })
-    .then(function(data){
-    	  renderAllSeaLife(seaLifeContainer, data)
-    })
+
+     fetch(seaLifeURL)
+        .then(r=> r.json())
+        .then(data => {
+    	      renderAllSeaLife(seaLifeContainer, data)
+         })
+
 
     fetch(oceansURL)
-    .then(function(response){
-       return response.json();
-     })
-     .then(function(data){
-
+    .then(r=> r.json())
+    .then(data => {
        data.forEach(function(element){
          oceanDiv(oceanBar, element)
-       });
+        });
      })
+
 
 
      //event listeners here
@@ -50,7 +48,7 @@
              return element.oceanId === parseInt(oceanId)
            })
           seaLifeContainer.innerHTML = ""
-          renderAllSeaLife(filtered)
+          renderAllSeaLife(seaLifeContainer, filtered)
          })
         }
      });
