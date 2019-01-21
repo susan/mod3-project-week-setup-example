@@ -19,7 +19,7 @@
      fetch(seaLifeURL)
         .then(r=> r.json())
         .then(data => {
-    	      renderAllSeaLife(seaLifeContainer, data)
+            renderAllSeaLife(seaLifeContainer, data)
          })
 
 
@@ -162,5 +162,3 @@
     oceanDiv.append(imgOcean)
     oceanBar.append(oceanDiv);
   }
-
-
