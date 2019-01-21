@@ -40,6 +40,28 @@
     //for dom removal or for choosing favorite
     seaLifeContainer.addEventListener("click", function (event) {clickHandler(event, seaLifeURL, seaLifeContainer)})
 
+     //trying carousel here
+    // document.addEventListener('DOMContentLoaded', function () {
+    //   let carouselElems = document.querySelector('.carousel.carousel-slider');
+    //   let carouselInstance = M.Carousel.init(carouselElems, {
+    //         fullWidth: true,
+    //         indicators: true
+    //     });
+    // });
+    // function moveNextCarousel() {
+    //     var elems = document.querySelector('.carousel.carousel-slider');
+    //     var moveRight = M.Carousel.getInstance(elems);
+    //     moveRight.next(1);
+    // }
+    // function movePrevCarousel() {
+    //     var elems = document.querySelector('.carousel.carousel-slider');
+    //     var moveLeft = M.Carousel.getInstance(elems);
+    //     moveLeft.prev(1);
+    // }
+
+
+
+
  }
 
   //functions go here
@@ -162,3 +184,5 @@
     oceanDiv.append(imgOcean)
     oceanBar.append(oceanDiv);
   }
+
+
