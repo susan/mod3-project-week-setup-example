@@ -1,0 +1,79 @@
+body {
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande',
+    sans-serif;
+  font-weight: 300;
+}
+
+body {
+  //background-color: lightblue;
+  /*background-image: url("./ocean-imgs/shark.jpg");*/
+  /*background-repeat: repeat-x;*/
+}
+
+#container {
+  width: 1000px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+/*#seaLife-search-form {
+  width: 500px;
+  margin: auto;
+  margin-top: 50px;
+}*/
+
+/*#seaLife-search-input {
+  font-size: 3rem;
+  border: 3px solid #fecd2f;
+  color: #2d72fc;
+}*/
+
+seaLife-bar {
+  height: 15vh;
+  background: skyblue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+
+#seaLife-bar span {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2em;
+  border: 1px solid blue;
+  overflow: hidden;
+  ;
+}
+
+
+
+input:focus {
+  outline: none;
+}
+
+.seaLife-card {
+  float: left;
+  width: 250px;
+  margin: auto;
+}
+
+.seaLife-frame {
+  width: 230px;
+  margin: 10px;
+  background: #FF8C00;
+  color: #FF8C00
+}
+
+.seaLife-image {
+  width: 400px;
+  margin: auto;
+}
+
+.center-text {
+  text-align: center;
+}
+

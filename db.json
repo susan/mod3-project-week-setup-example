@@ -1,32 +1,189 @@
 {
-  "notes": [
+  "oceans": [
     {
-      "id": "1",
-      "title": "Research for Blog Post",
-      "body":
-        "I don't really understand the way fetch handles bad requests (400 level status code), do research and provide example for blog post"
+      "id": 1,
+      "name": "Pacific Ocean",
+      "image": "http://gowild.wwf.org.uk/wp-content/uploads/PacificOcean_pag1.jpg"
     },
     {
-      "id": "2",
-      "title": "Great idea for YA novel",
-      "body":
-        "Young Adult novel about a kid who's apartment is on the top floor of a functioning MegaBus"
+      "id": 2,
+      "name": "Atlantic Ocean",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyFID2uVqZHdIC7LvHycfua9fEi_P0dyLIrUMVFE82lRl_7fB4"
     },
     {
-      "id": "3",
-      "title": "Ask friend for music",
-      "body": "Reminder to ask D. about the playlist from last weekend"
+      "id": 3,
+      "name": "Indian Ocean",
+      "image": "https://thumbs-prod.si-cdn.com/faChACEGBApDo484R1X794xdjXU=/800x600/filters:no_upscale()/https://public-media.si-cdn.com/filer/d1/c4/d1c4f3ea-3817-4829-a05b-afd5e50c2139/istock-134215790.jpg"
+    }
+  ],
+  "seaLife": [
+    {
+      "id": 1,
+      "name": "Australian Giant Cuttlefish",
+      "isMyFavorite": true,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/07/cuttlefish-768x512.jpg",
+      "oceanId": 1
     },
     {
-      "id": "4",
-      "title": "More notes on fetch",
-      "body":
-        "Reminder that .then(res => res.json()) will fail if the response is not valid JSON (i.e it's an empty string)"
+      "id": 2,
+      "name": "Bull Shark",
+      "isMyFavorite": true,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/07/bull-768x480.jpg",
+      "oceanId": 1
     },
     {
-      "id": "5",
-      "title": "Alternatives to fetch",
-      "body": "Look up 'axios' library"
+      "id": 3,
+      "name": "Branch Coral",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/07/coral-768x647.jpg",
+      "oceanId": 1
+    },
+    {
+      "id": 4,
+      "name": "Blue Whale",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/07/blue-whale.jpg",
+      "oceanId": 1
+    },
+    {
+      "id": 5,
+      "name": "Basking Shark",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/07/basking-768x432.jpg",
+      "oceanId": 1
+    },
+    {
+      "id": 6,
+      "name": "Hawksbill Turtle",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/07/turtle-768x576.jpg",
+      "oceanId": 1
+    },
+    {
+      "id": 7,
+      "name": "Vaquita",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/07/vaquita-raziel-levi-mendez-moreno-768x419.jpg",
+      "oceanId": 1
+    },
+    {
+      "id": 8,
+      "name": "Oval Butterfish",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/07/img2E.jpg",
+      "oceanId": 1
+    },
+    {
+      "id": 9,
+      "name": "Beluga(White Whales)",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/07/whale1-768x540.jpg",
+      "oceanId": 2
+    },
+    {
+      "id": 10,
+      "name": "Atlantic Bluefin Tuna",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/07/bluefin.jpg",
+      "oceanId": 2
+    },
+    {
+      "id": 11,
+      "name": "Lined Seahorse",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/07/Lined-Seahorse-In-Aquarium.jpg",
+      "oceanId": 2
+    },
+    {
+      "id": 12,
+      "name": "Hooded Seal",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/07/hooded-768x512.jpg",
+      "oceanId": 2
+    },
+    {
+      "id": 13,
+      "name": "LeatherBack Sea Turtle",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/07/leatherback-sea-turtle-florida-everglades-768x510.jpg",
+      "oceanId": 2
+    },
+    {
+      "id": 14,
+      "name": "Walrus",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/07/maxresdefault-768x432.jpg",
+      "oceanId": 2
+    },
+    {
+      "id": 15,
+      "name": "Amazonian Manatee",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/07/amanatee4-e1500865611588-768x536.jpg",
+      "oceanId": 2
+    },
+    {
+      "id": 16,
+      "name": "Dusky Dolphin",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/07/dusky.jpg",
+      "oceanId": 2
+    },
+    {
+      "id": 17,
+      "name": "African Penguin",
+      "isMyFavorite": true,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/10/ap-300x201.jpg",
+      "oceanId": 3
+    },
+    {
+      "id": 18,
+      "name": "Albatross",
+      "isMyFavorite": true,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/10/a-1-300x204.jpg",
+      "oceanId": 3
+    },
+    {
+      "id": 19,
+      "name": "Angelfish",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/10/freshwater-angelfish-300x200.jpg",
+      "oceanId": 3
+    },
+    {
+      "id": 20,
+      "name": "Blue Whale",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/10/bw-300x169.jpg",
+      "oceanId": 3
+    },
+    {
+      "id": 21,
+      "name": "Butterfly fish",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/10/Butterfly-Fish1.jpg",
+      "oceanId": 3
+    },
+    {
+      "id": 22,
+      "name": "Cuttlefish",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/10/giant-cuttlefish.jpg",
+      "oceanId": 3
+    },
+    {
+      "id": 23,
+      "name": "Dugong",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/10/dugong.jpg",
+      "oceanId": 3
+    },
+    {
+      "id": 24,
+      "name": "Zebra Shark",
+      "isMyFavorite": false,
+      "image": "https://deepoceanfacts.com/wp-content/uploads/2017/10/gc-768x432.jpg",
+      "oceanId": 3
     }
   ]
 }
