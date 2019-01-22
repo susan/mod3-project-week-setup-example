@@ -12,6 +12,7 @@ before_action :find_seaLife, only: [:show, :update]
   end
 
   def update
+    find_seaLife
     @seaLife.update(seaLives_params)
     if @seaLife.save
       render json: @seaLife, status: :accepted
@@ -23,12 +24,10 @@ before_action :find_seaLife, only: [:show, :update]
   private
 
   def seaLives_params
-    params.permit(:title, :content)
+    params.permit(:name, :image, :isMyFavorite)
   end
 
   def find_seaLife
     @seaLife = SeaLife.find(params[:id])
   end
 end
-
-

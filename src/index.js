@@ -11,8 +11,8 @@
 
     const seaLifeContainer = document.querySelector("#seaLife-container")
     const oceanBar = document.querySelector("#ocean-bar")
-    const seaLifeURL = "http://localhost:3000/seaLife"
-    const oceansURL = "http://localhost:3000/oceans"
+    const seaLifeURL = "http://localhost:3000/api/v1/sea_lives"
+    const oceansURL = "http://localhost:3000/api/v1/oceans"
 
     //fetches here
 
@@ -75,8 +75,10 @@
 
         .then(data => {
            let filtered = data.filter(function(element){
-             return element.oceanId === parseInt(oceanId)
+             // debugger
+             return element.ocean.id === parseInt(oceanId)
            })
+           // debugger
            seaLifeContainer.innerHTML = ""
            renderAllSeaLife(seaLifeContainer, filtered)
         })
@@ -98,6 +100,7 @@
        let body = {
          isMyFavorite: isTrueSet
        }
+        // debugger
 
        fetch(`${seaLifeURL}/${event.target.dataset.id}`,
        {
@@ -110,7 +113,7 @@
         })
 
         .then(r=> r.json())
-        .then(data => {
+        .then(data => {console.log(data)
            renderSeaLife(seaLifeContainer, data);
            textButton(event.target, data)
         })
@@ -186,3 +189,20 @@
   }
 
 
+//------------------------Carousel-----------------------//
+// $('.slider2').slick({
+// 	dots: true,
+// 	infinite: true,
+// 	centerMode: true,
+// 	centerPadding: '12%',
+// 	slidesToShow: 3,
+// 	speed: 500,
+// responsive: [{
+//
+//       breakpoint: 992,
+//       settings: {
+//         slidesToShow: 1
+//       }
+//
+//     }]
+// });
