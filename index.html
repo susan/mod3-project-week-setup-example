@@ -3,78 +3,453 @@
   <head>
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
-
+<link rel="stylesheet" href="/Users/Dunzz/dev/javascript/JavascriptLibraries/node_modules/slick-carousel/slick/slick.css">
+<link rel="stylesheet" href="/Users/Dunzz/dev/javascript/JavascriptLibraries/node_modules/slick-carousel/slick/slick-theme.css">
 
     <meta charset="utf-8">
     <title>OceanWorld!</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <!-- <link type="text/css" rel="stylesheet" href="style/materialize.min.css"  media="screen,projection"/> -->
+<link rel="stylesheet" href="style/style.css">
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" type="text/css" href="style/style.css">
   </head>
    <body>
-     </div>
-    <div id="ocean-bar">
-    </div>
+     <div class="ocean">
 
-    <div id="container">
-      <form id="Ocean-filter-form" class="" action="" method="">
+
+
+
+
+   <!--main nav-->
+   <div class="main-header" >
+     <nav>
+       <div class="main-row"> <!--beginning of first row-->
+     <!--logo image -->
+     <p> Choose an Ocean: <br> Pacific Ocean<br> Atlantic Ocean <br> Indian Ocean<br>    <br>
+     </p>
+     <div class="arrowDiv"><img class="arrow" src="/Users/Dunzz/dev/javascript/ocean/ocean-imgs/arrow.png" alt=""></div>
+
+       <ul class="main-buttons" id="navBar">
+
+       </ul>
+       <!--search input-->
+       <!-- <input class="nav-search"type="text" placeholder="Search..."> -->
+      </div><!--end of first row-->
+</div>
+
+    <!-- <div id="container"> -->
+      <!-- <form id="Ocean-filter-form" class="" action="" method="">
         <input id="Ocean-filter-input" type="text" name="">
-      </form>
+      </form> -->
 
       <div id="seaLife-container">
-        <p id = "seaLife-container"><center>All SeaLife</center></p>
+
+
+        <h4 id = "seaLife-container"><center><h5>All SeaLife</h5></center></h4>
+      </div>
+
+    <section>
+
+    <div class="slider2">
+    	<div>
+    		<article>
+    			<div class="col-xs-5 img-box" data-id="11">
+    				<img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/Lined-Seahorse-In-Aquarium.jpg" alt="" />
+            <p>sdgf</p>
+    			</div>
+    		</article>
+    	</div>
+    	<div>
+    		<article>
+    			<div class="col-xs-5 img-box" data-id="12">
+    				<img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/hooded-768x512.jpg" alt="" />
+    			</div>
+    		</article>
+    	</div>
+    	<div>
+    		<article>
+    			<div class="col-xs-5 img-box" data-id="13">
+    				<img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/leatherback-sea-turtle-florida-everglades-768x510.jpg" alt="" />
+    			</div>
+    		</article>
+    	</div>
+    	<div>
+    		<article>
+    			<div class="col-xs-5 img-box" data-id="14">
+    				<img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/maxresdefault-768x432.jpg" alt="" />
+    			</div>
+    		</article>
+    	</div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="15">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/amanatee4-e1500865611588-768x536.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+    		<article>
+    			<div class="col-xs-5 img-box" data-id="16">
+    				<img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/dusky.jpg" alt="" />
+    			</div>
+    		</article>
+    	</div>
+      <div>
+    		<article>
+    			<div class="col-xs-5 img-box" data-id="17">
+    				<img src="https://deepoceanfacts.com/wp-content/uploads/2017/10/ap-300x201.jpg" alt="" />
+    			</div>
+    		</article>
+    	</div>
+      <div>
+    		<article>
+    			<div class="col-xs-5 img-box" data-id="18">
+    				<img src="https://deepoceanfacts.com/wp-content/uploads/2017/10/a-1-300x204.jpg" alt="" />
+    			</div>
+    		</article>
+    	</div>
+      <div>
+    		<article>
+    			<div class="col-xs-5 img-box" data-id="19">
+    				<img src="https://deepoceanfacts.com/wp-content/uploads/2017/10/freshwater-angelfish-300x200.jpg" alt="" />
+    			</div>
+    		</article>
+    	</div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="20">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/10/bw-300x169.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="21">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/10/Butterfly-Fish1.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="22">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/10/giant-cuttlefish.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="23">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/10/dugong.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="24">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/10/gc-768x432.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="1">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/cuttlefish-768x512.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="2">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/bull-768x480.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="3">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/coral-768x647.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="4">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/blue-whale.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="5">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/basking-768x432.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="6">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/turtle-768x576.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="7">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/vaquita-raziel-levi-mendez-moreno-768x419.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="8">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/img2E.jpg" alt="" />
+            <p>sdgf</p>
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="9">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/whale1-768x540.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="10">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/bluefin.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+
+
+
+
+    </div>
+    </section>
+
+      <div class="bubbles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="fish">
+        <!-- eyes -->
+        <span></span>
+        <span></span>
+        <!-- mouth -->
+        <span></span>
+        <!-- bubbles -->
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  </div>
+    <!-- <section> -->
+
+
+    <!-- <div class="slider2">
+
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="1">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/cuttlefish-768x512.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="2">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/bull-768x480.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="3">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/coral-768x647.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="4">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/blue-whale.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="5">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/basking-768x432.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="6">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/turtle-768x576.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="7">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/vaquita-raziel-levi-mendez-moreno-768x419.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="8">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/img2E.jpg" alt="" />
+            <p>sdgf</p>
+          </div>
+        </article>
+      </div>
+
+
+
+
+
+    </div>
+    </section> -->
+
+    <!-- <section>
+      <div class="slider2">
+        <div>
+          <article>
+            <div class="col-xs-5 img-box" data-id="11">
+              <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/Lined-Seahorse-In-Aquarium.jpg" alt="" />
+              <p>sdgf</p>
+            </div>
+          </article>
+        </div>
+        <div>
+          <article>
+            <div class="col-xs-5 img-box" data-id="12">
+              <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/hooded-768x512.jpg" alt="" />
+            </div>
+          </article>
+        </div>
+        <div>
+          <article>
+            <div class="col-xs-5 img-box" data-id="13">
+              <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/leatherback-sea-turtle-florida-everglades-768x510.jpg" alt="" />
+            </div>
+          </article>
+        </div>
+        <div>
+          <article>
+            <div class="col-xs-5 img-box" data-id="14">
+              <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/maxresdefault-768x432.jpg" alt="" />
+            </div>
+          </article>
+        </div>
+        <div>
+          <article>
+            <div class="col-xs-5 img-box" data-id="15">
+              <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/amanatee4-e1500865611588-768x536.jpg" alt="" />
+            </div>
+          </article>
+        </div>
+        <div>
+          <article>
+            <div class="col-xs-5 img-box" data-id="16">
+              <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/dusky.jpg" alt="" />
+            </div>
+          </article>
+        </div>
+        <div>
+          <article>
+            <div class="col-xs-5 img-box" data-id="9">
+              <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/whale1-768x540.jpg" alt="" />
+            </div>
+          </article>
+        </div>
+        <div>
+          <article>
+            <div class="col-xs-5 img-box" data-id="10">
+              <img src="https://deepoceanfacts.com/wp-content/uploads/2017/07/bluefin.jpg" alt="" />
+            </div>
+          </article>
+        </div>
+      </div>
+    </section> -->
+
+
+
+
+  <!-- <section>
+
+    <div class="slider2">
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="17">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/10/ap-300x201.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="18">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/10/a-1-300x204.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="19">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/10/freshwater-angelfish-300x200.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="20">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/10/bw-300x169.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="21">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/10/Butterfly-Fish1.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="22">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/10/giant-cuttlefish.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="23">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/10/dugong.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="col-xs-5 img-box" data-id="24">
+            <img src="https://deepoceanfacts.com/wp-content/uploads/2017/10/gc-768x432.jpg" alt="" />
+          </div>
+        </article>
       </div>
     </div>
-    <!-- <div class="carousel">
-    <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
-    <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
-    <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
-    <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
-    <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
-  </div> -->
-  <!-- <section>
-<div class="slider2">
-	<div>
-		<article>
-			<div class="col-xs-5 img-box">
-				<img src="https://lorempixel.com/250/250/nature/1" alt="" />
-			</div>
-		</article>
-	</div>
-	<div>
-		<article>
-			<div class="col-xs-5 img-box">
-				<img src="https://lorempixel.com/250/250/nature/2" alt="" />
-			</div>
-		</article>
-	</div>
-	<div>
-		<article>
-			<div class="col-xs-5 img-box">
-				<img src="https://lorempixel.com/250/250/nature/3" alt="" />
-			</div>
-		</article>
-	</div>
-	<div>
-		<article>
-			<div class="col-xs-5 img-box">
-				<img src="https://lorempixel.com/250/250/nature/4" alt="" />
-			</div>
-		</article>
-	</div>
-  <div>
-    <article>
-      <div class="col-xs-5 img-box">
-        <img src="https://lorempixel.com/250/250/nature/5" alt="" />
-      </div>
-    </article>
-  </div>
-</div>
-</section> -->
+  </section> -->
+
+
+</body>
+
 
 <script src="src/index.js" charset="utf-8"></script>
 

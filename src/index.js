@@ -10,9 +10,11 @@
     function init(){
 
     const seaLifeContainer = document.querySelector("#seaLife-container")
+    seaLifeContainer.class = "slider2"
     const oceanBar = document.querySelector("#ocean-bar")
     const seaLifeURL = "http://localhost:3000/api/v1/sea_lives"
     const oceansURL = "http://localhost:3000/api/v1/oceans"
+    const sideBar = document.querySelector("#navBar")
 
     //fetches here
 
@@ -27,14 +29,14 @@
     .then(r=> r.json())
     .then(data => {
        data.forEach(function(element){
-         oceanDiv(oceanBar, element)
+         oceanDiv(oceanBar, element, sideBar)
         });
      })
 
 
      //event listeners here
      //for the ocean creatures they select
-    oceanBar.addEventListener("click", function(event){seaLifeHandler(event, seaLifeURL, seaLifeContainer)})
+    sideBar.addEventListener("click", function(event){seaLifeHandler(event, seaLifeURL, seaLifeContainer, sideBar)})
 
 
     //for dom removal or for choosing favorite
@@ -124,34 +126,54 @@
 
 
   function renderSeaLife(seaLifeContainer, creature) {
-
-    const seaCard = document.createElement("div")
-    seaCard.className = "seaLife-card"
-    const seaFrame = document.createElement("div")
-    seaFrame.className = "seaLife-frame"
-    const h1 = document.createElement("h1")
-    h1.className = "center-text"
-    h1.innerHTML = creature.name
-    const image = document.createElement("img")
-    image.className= "seaLife-image"
-    image.src = creature.image
-    image.style.maxWidth = "200 px"
-    image.style.maxHeight = "200 px"
-
-    const isMyFavorite = document.createElement("button");
-    isMyFavorite.className = "favorite-btn"
-    isMyFavorite.innerHTML = textButton(isMyFavorite, creature);
-    isMyFavorite.dataset.id = creature.id
-
-    deleteButton = document.createElement("button")
-    deleteButton.className = "delete-btn"
-    deleteButton.innerHTML = "x"
-    deleteButton.dataset.value = "delete"
-
-
-    seaFrame.append(seaCard)
-    seaCard.append(h1, image, isMyFavorite, deleteButton)
-    seaLifeContainer.append(seaFrame)
+document.querySelector(".slick-track").innerHTML +=
+    `<div class="slick-slide slick-cloned" tabindex="-1" role="tabpanel" aria-describedby="slick-slide-control022" style="width: 639px;" data-slick-index="-2" aria-hidden="true">
+       <article>
+    <div class="col-xs-5 img-box" id="please">
+      <img src="${creature.image}" alt="" />
+      <p>sdgf</p>
+    </div>
+  </article>
+    </div>`
+  //
+  //   const seaCard = document.createElement("div")
+  //   seaCard.className = "seaLife-card"
+  //   let articleTag = document.createElement("article")
+  //   seaCard.append(articleTag)
+  //   let newElement = document.createElement("div")
+  //   newElement.className = "col-xs-5 img-box"
+  //   articleTag.append(newElement)
+  //   let imageElement = document.createElement("img")
+  //   imageElement.src = creature.image
+  //   newElement.append(imageElement)
+  //
+  //   // debugger
+  //   const seaFrame = document.createElement("div")
+  //   seaFrame.className = "seaLife-frame"
+  //   const h1 = document.createElement("h1")
+  //   h1.className = "center-text"
+  //   h1.innerHTML = creature.name
+  //   const image = document.createElement("img")
+  //   image.className= "seaLife-image"
+  //   image.src = creature.image
+  //   image.style.maxWidth = "200 px"
+  //   image.style.maxHeight = "200 px"
+  //
+  //   const isMyFavorite = document.createElement("button");
+  //   isMyFavorite.className = "favorite-btn"
+  //   isMyFavorite.innerHTML = textButton(isMyFavorite, creature);
+  //   isMyFavorite.dataset.id = creature.id
+  //
+  //   deleteButton = document.createElement("button")
+  //   deleteButton.className = "delete-btn"
+  //   deleteButton.innerHTML = "x"
+  //   deleteButton.dataset.value = "delete"
+  //
+  //   // debugger
+  //   seaFrame.append(seaCard)
+  //   seaCard.append(h1, image, isMyFavorite, deleteButton)
+  //   // debugger
+  //   seaLifeContainer.append(seaFrame)
   }
 
   function renderAllSeaLife(seaLifeContainer, seaLife){
@@ -173,36 +195,42 @@
   }
 
 
-  function oceanDiv(oceanBar, water){
+  function oceanDiv(oceanBar, water, sideBar){
     let oceanDiv = document.createElement("span")
     oceanDiv.dataset.id = water.id
     oceanDiv.classList = "ocean-name";
-    oceanDiv.innerHTML = water.name
+    // oceanBar.innerHTML += ` <span class="waterName">${water.name}</span> `
     const imgOcean = document.createElement("img")
     imgOcean.dataset.id = water.id
-    imgOcean.style.maxWidth = "300px"
-    imgOcean.style.maxHeight = "90px"
+    imgOcean.style.width = "240px"
+    imgOcean.style.height = "115px"
+    // imgOcean.style.padding.right = "15px"
     imgOcean.className= "ocean-image"
     imgOcean.src = water.image
+    // debugger
     oceanDiv.append(imgOcean)
-    oceanBar.append(oceanDiv);
+    // oceanBar.append(oceanDiv);
+
+    sideBar.append(oceanDiv)
+
   }
 
 
-//------------------------Carousel-----------------------//
-// $('.slider2').slick({
-// 	dots: true,
-// 	infinite: true,
-// 	centerMode: true,
-// 	centerPadding: '12%',
-// 	slidesToShow: 3,
-// 	speed: 500,
-// responsive: [{
-//
-//       breakpoint: 992,
-//       settings: {
-//         slidesToShow: 1
-//       }
-//
-//     }]
-// });
+// ------------------------Carousel-----------------------//
+$('.slider2').slick({
+	dots: true,
+  arrows: true,
+	infinite: true,
+	centerMode: true,
+	centerPadding: '1%',
+	slidesToShow: 4,
+	speed: 500,
+responsive: [{
+
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 1
+      }
+
+    }]
+});
