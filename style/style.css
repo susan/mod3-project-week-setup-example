@@ -548,3 +548,9 @@ div#ocean-2.slick-slider {
 div#ocean-3.slick-slider {
   display: none;
 }
+
+/*selected Card*/
+
+.info-card {
+  background-color: pink;
+}
