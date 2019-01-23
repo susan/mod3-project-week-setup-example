@@ -3,15 +3,12 @@
   <head>
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
-<link rel="stylesheet" href="/Users/Dunzz/dev/javascript/JavascriptLibraries/node_modules/slick-carousel/slick/slick.css">
-<link rel="stylesheet" href="/Users/Dunzz/dev/javascript/JavascriptLibraries/node_modules/slick-carousel/slick/slick-theme.css">
+<link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
+<link rel="stylesheet" href="node_modules/slick-carousel/slick/slick-theme.css">
 
+<link rel="stylesheet" href="style/style.css">
     <meta charset="utf-8">
     <title>OceanWorld!</title>
-      <!--Import materialize.css-->
-      <!-- <link type="text/css" rel="stylesheet" href="style/materialize.min.css"  media="screen,projection"/> -->
-<link rel="stylesheet" href="style/style.css">
-
   </head>
    <body>
      <div class="ocean">
@@ -25,9 +22,9 @@
      <nav>
        <div class="main-row"> <!--beginning of first row-->
      <!--logo image -->
-     <p> Choose an Ocean: <br> Pacific Ocean<br> Atlantic Ocean <br> Indian Ocean<br>    <br>
+     <p> Choose an Ocean: <br> *Pacific<br> *Atlantic<br> *Indian<br>    <br>
      </p>
-     <div class="arrowDiv"><img class="arrow" src="/Users/Dunzz/dev/javascript/ocean/ocean-imgs/arrow.png" alt=""></div>
+     <div class="arrowDiv"><img class="arrow" src="ocean-imgs/arrow.png" alt=""></div>
 
        <ul class="main-buttons" id="navBar">
 
@@ -48,9 +45,9 @@
         <h4 id = "seaLife-container"><center><h5>All SeaLife</h5></center></h4>
       </div>
 
+<!-- full slider -->
     <section>
-
-    <div class="slider2">
+    <div class="slider2" id= "full">
     	<div>
     		<article>
     			<div class="col-xs-5 img-box" data-id="11">
@@ -222,39 +219,15 @@
         </article>
       </div>
 
-
-
-
     </div>
     </section>
 
-      <div class="bubbles">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="fish">
-        <!-- eyes -->
-        <span></span>
-        <span></span>
-        <!-- mouth -->
-        <span></span>
-        <!-- bubbles -->
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-  </div>
-    <!-- <section> -->
 
 
-    <!-- <div class="slider2">
 
+<!-- !-- Pacific slider -->
+ <section>
+    <div class="slider2" id="ocean-1">
       <div>
         <article>
           <div class="col-xs-5 img-box" data-id="1">
@@ -312,16 +285,13 @@
           </div>
         </article>
       </div>
+</section>
 
 
+<!-- Atlantic slider -->
+    <section>
+      <div class="slider2", id="ocean-2">
 
-
-
-    </div>
-    </section> -->
-
-    <!-- <section>
-      <div class="slider2">
         <div>
           <article>
             <div class="col-xs-5 img-box" data-id="11">
@@ -380,14 +350,12 @@
           </article>
         </div>
       </div>
-    </section> -->
+    </section>
 
+ <!-- Indian -->
+  <section>
 
-
-
-  <!-- <section>
-
-    <div class="slider2">
+    <div class="slider2" id="ocean-3">
       <div>
         <article>
           <div class="col-xs-5 img-box" data-id="17">
@@ -445,9 +413,36 @@
         </article>
       </div>
     </div>
-  </section> -->
+  </section>
+ <!-- -->
 
+<!-- ocean tank  bubbles -->
 
+      <div class="bubbles">
+        <div class="ocean-tank">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="fish">
+        <!-- eyes -->
+        <span></span>
+        <span></span>
+        <!-- mouth -->
+        <span></span>
+        <!-- bubbles -->
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  </div>
+
+</div>
 </body>
 
 

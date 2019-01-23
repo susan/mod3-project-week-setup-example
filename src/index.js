@@ -1,64 +1,44 @@
 
-//selectors go here
-
-// const seaLifeContainer = document.querySelector("#seaLife-container")
-// const oceanBar = document.querySelector("#ocean-bar")
-// const seaLifeURL = "http://localhost:3000/seaLife"
-// const oceansURL = "http://localhost:3000/oceans"
-
   document.addEventListener("DOMContentLoaded", init)
     function init(){
 
+    //selectors here
     const seaLifeContainer = document.querySelector("#seaLife-container")
-    seaLifeContainer.class = "slider2"
+      seaLifeContainer.class = "slider2"
     const oceanBar = document.querySelector("#ocean-bar")
     const seaLifeURL = "http://localhost:3000/api/v1/sea_lives"
     const oceansURL = "http://localhost:3000/api/v1/oceans"
-    const sideBar = document.querySelector("#navBar")
+    const navBar = document.querySelector("#navBar")
+    const oceanTank = document.querySelector(".ocean-tank")
+    const fullCarousel = document.querySelector("#full")
 
     //fetches here
 
-     fetch(seaLifeURL)
-        .then(r=> r.json())
-        .then(data => {
-            renderAllSeaLife(seaLifeContainer, data)
-         })
+     // fetch(seaLifeURL)
+     //    .then(r=> r.json())
+     //    .then(data => {
+     //        renderAllSeaLife(seaLifeContainer, data)
+     //     })
 
 
     fetch(oceansURL)
     .then(r=> r.json())
     .then(data => {
        data.forEach(function(element){
-         oceanDiv(oceanBar, element, sideBar)
+         oceanDiv(oceanBar, element, navBar)
         });
      })
 
 
      //event listeners here
      //for the ocean creatures they select
-    sideBar.addEventListener("click", function(event){seaLifeHandler(event, seaLifeURL, seaLifeContainer, sideBar)})
+    navBar.addEventListener("click", function(event){seaLifeHandler(event, seaLifeURL, oceanTank, navBar, fullCarousel)})
 
 
     //for dom removal or for choosing favorite
     seaLifeContainer.addEventListener("click", function (event) {clickHandler(event, seaLifeURL, seaLifeContainer)})
 
-     //trying carousel here
-    // document.addEventListener('DOMContentLoaded', function () {
-    //   let carouselElems = document.querySelector('.carousel.carousel-slider');
-    //   let carouselInstance = M.Carousel.init(carouselElems, {
-    //         fullWidth: true,
-    //         indicators: true
-    //     });
-    // });
-    // function moveNextCarousel() {
-    //     var elems = document.querySelector('.carousel.carousel-slider');
-    //     var moveRight = M.Carousel.getInstance(elems);
-    //     moveRight.next(1);
-    // }
-    // function movePrevCarousel() {
-    //     var elems = document.querySelector('.carousel.carousel-slider');
-    //     var moveLeft = M.Carousel.getInstance(elems);
-    //     moveLeft.prev(1);
+
     // }
 
 
@@ -68,7 +48,7 @@
 
   //functions go here
   //dom removal or for choosing favorites
-  function seaLifeHandler(event, seaLifeURL, seaLifeContainer) {
+  function seaLifeHandler(event, seaLifeURL, oceanTank, navBar, fullCarousel) {
     if(event.target.className === "ocean-image"){
       let oceanId = event.target.dataset.id
 
@@ -77,14 +57,17 @@
 
         .then(data => {
            let filtered = data.filter(function(element){
-             // debugger
+             //debugger
              return element.ocean.id === parseInt(oceanId)
            })
            // debugger
-           seaLifeContainer.innerHTML = ""
-           renderAllSeaLife(seaLifeContainer, filtered)
+           //seaLifeContainer.innerHTML = ""
+           renderAllSeaLife(oceanTank, filtered)
         })
-     }
+       let viewedCarousel = document.querySelector(`#ocean-${oceanId}`)
+       viewedCarousel.style.display = "block";
+       fullCarousel.style.display = "none";
+      }//end of if
   }
 
 
@@ -125,16 +108,13 @@
 
 
 
-  function renderSeaLife(seaLifeContainer, creature) {
-document.querySelector(".slick-track").innerHTML +=
-    `<div class="slick-slide slick-cloned" tabindex="-1" role="tabpanel" aria-describedby="slick-slide-control022" style="width: 639px;" data-slick-index="-2" aria-hidden="true">
-       <article>
-    <div class="col-xs-5 img-box" id="please">
-      <img src="${creature.image}" alt="" />
-      <p>sdgf</p>
-    </div>
-  </article>
-    </div>`
+  function renderSeaLife(oceanTank, creature) {
+    console.log(oceanTank, creature)
+    let imageSeaLife = document.createElement("img")
+      imageSeaLife.src = creature.image
+      imageSeaLife.className = "slow"
+      oceanTank.append(imageSeaLife)
+  }
   //
   //   const seaCard = document.createElement("div")
   //   seaCard.className = "seaLife-card"
@@ -174,11 +154,11 @@ document.querySelector(".slick-track").innerHTML +=
   //   seaCard.append(h1, image, isMyFavorite, deleteButton)
   //   // debugger
   //   seaLifeContainer.append(seaFrame)
-  }
+  //}
 
-  function renderAllSeaLife(seaLifeContainer, seaLife){
+  function renderAllSeaLife(oceanTank, seaLife){
     return seaLife.map(function(creature){
-      renderSeaLife(seaLifeContainer, creature);
+      renderSeaLife(oceanTank, creature);
     });
   }
 
@@ -195,7 +175,7 @@ document.querySelector(".slick-track").innerHTML +=
   }
 
 
-  function oceanDiv(oceanBar, water, sideBar){
+  function oceanDiv(oceanBar, water, navBar){
     let oceanDiv = document.createElement("span")
     oceanDiv.dataset.id = water.id
     oceanDiv.classList = "ocean-name";
@@ -211,7 +191,7 @@ document.querySelector(".slick-track").innerHTML +=
     oceanDiv.append(imgOcean)
     // oceanBar.append(oceanDiv);
 
-    sideBar.append(oceanDiv)
+    navBar.append(oceanDiv)
 
   }
 

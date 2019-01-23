@@ -1,19 +1,3 @@
-/*
-
-body {
-  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande',
-    sans-serif;
-  font-weight: 300;
-}
-
-body {
-  background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/QwIr88a/coral-reef-fish-underwater-ocean-sea-life-wildlife-school-marine-sunlight-rays-background-beauty-gopro-hd_vked6_fgm__F0000.png");
-  height: 100%;
-
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-} */
 
 #container {
   width: 1000px;
@@ -21,17 +5,6 @@ background-size: cover;
   margin-top: 50px;
 }
 
-/*#seaLife-search-form {
-  width: 500px;
-  margin: auto;
-  margin-top: 50px;
-}*/
-
-/*#seaLife-search-input {
-  font-size: 3rem;
-  border: 3px solid #fecd2f;
-  color: #2d72fc;
-}*/
 
 seaLife-bar {
   height: 15vh;
@@ -402,8 +375,9 @@ body {
     }
 /* n */
 
+/* beginning of NavBar*/
 
-@import url("https://fonts.googleapis.com/css?family=Roboto");
+/*@import url("https://fonts.googleapis.com/css?family=Roboto");*/
 }
 *{
   padding: 0;
@@ -438,7 +412,7 @@ p{
   border-radius: 15px 50px;
   border: 30px solid transparent;
 /* padding: 15px; */
-border-image: url("/Users/Dunzz/dev/javascript/ocean/ocean-imgs/border.png") 20% round;
+border-image: url("ocean-imgs/border.png") 20% round;
 
 }
 
@@ -451,7 +425,7 @@ h5{
   border-radius: 15px 50px;
   border: 30px solid transparent;
 /* padding: 15px; */
-/* border-image: url("/Users/Dunzz/dev/javascript/ocean/ocean-imgs/border.png") 20% round; */
+
 
 }
 /*-----------------*/
@@ -494,13 +468,11 @@ background-color: transparent}
 padding-left: 20px;
 }
 
-/* .main-row ul > li{
-  padding-right: 20px;
-  transition: color 0.4s, transform 0.3s;
-} */
+/* n navBar
 
 
-/* Carousel */
+
+/* beginning of Carousel */
 
 
 .slick-slide {
@@ -564,5 +536,15 @@ h1 {
 }
 
 .slick-prev:before, .slick-next:before {
-    color:red !important;
+    color:white !important;
+}
+
+div#ocean-1.slick-slider {
+  display: none;
+}
+div#ocean-2.slick-slider {
+  display: none;
+}
+div#ocean-3.slick-slider {
+  display: none;
 }
