@@ -101,15 +101,17 @@
              return element.ocean.id === parseInt(oceanId)
            })
            // debugger
-           seaLifeContainer.innerHTML =
-           `<span></span>
-          <span></span>
-          <span></span>
-         <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>`
+
+           //seaLifeContainer.innerHTML = ""
+           oceanTank.innerHTML = `<span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>`
+
            renderAllSeaLife(oceanTank, filtered)
 
            //filteredCreatures.creatures = filtered
@@ -213,8 +215,7 @@
 
   function renderInfoCard(infoCard, creature){
     const seaCardName = document.createElement("p")
-       seaCardName.innerHTML = `You picked: ${creature.name}.
-        <br><br>Description: ${creature.description}`
+       seaCardName.innerHTML = `You picked: ${creature.name}`
   //   let articleTag = document.createElement("article")
   //   seaCard.append(articleTag)
   //   let newElement = document.createElement("div")
@@ -241,18 +242,18 @@
       isMyFavorite.innerHTML = textButton(isMyFavorite, creature);
       isMyFavorite.dataset.id = creature.id
 
-     const deleteButton = document.createElement("button")
-       deleteButton.className = "delete-btn"
-       deleteButton.innerHTML = "Remove me from Ocean Tank"
-       deleteButton.dataset.value = "delete"
-       deleteButton.dataset.id = creature.id
-
-       const goFaster = document.createElement("button");
+    const goFaster = document.createElement("button");
       goFaster.className = "speed-btn"
       goFaster.innerHTML =  "Change my speed, change my size too!"
       goFaster.dataset.id = creature.id
 
-     infoCard.append(seaCardName, isMyFavorite, deleteButton, goFaster)
+    const deleteButton = document.createElement("button")
+      deleteButton.className = "delete-btn"
+      deleteButton.innerHTML = "Remove me from Ocean Tank"
+      deleteButton.dataset.value = "delete"
+      deleteButton.dataset.id = creature.id
+
+     infoCard.append(seaCardName, isMyFavorite, goFaster, deleteButton, )
     }
 
   function renderAllSeaLife(oceanTank, seaLife){
