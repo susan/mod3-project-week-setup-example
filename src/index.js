@@ -313,7 +313,7 @@ $('.slow').draggable({stack: "img"});
 // Change after 10 Seconds
 window.setInterval(function(){
   $('.slow').randomOrder(true);
-}, 7000);
+}, 4000);
 
 //Setup
 $('.medium').randomOrder(false);
