@@ -144,7 +144,8 @@
 
         .then(r=> r.json())
         .then(data => {console.log(data)
-           renderSeaLife(seaLifeContainer, data);
+          infoCard.innerHTML= ""
+           renderInfoCard(infoCard, data);
            textButton(event.target, data)
         })
 
