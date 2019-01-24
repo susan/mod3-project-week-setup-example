@@ -172,7 +172,7 @@
 
   function renderSeaLife(oceanTank, creature) {
     let imageSeaLife = document.createElement("img")
-      imageSeaLife.src = creature.image
+      imageSeaLife.src = creature.ocean_image
       imageSeaLife.className = "slow"
       imageSeaLife.id = `creature-${creature.id}`
       oceanTank.append(imageSeaLife)
@@ -274,7 +274,7 @@ responsive: [{
 
       breakpoint: 992,
       settings: {
-        slidesToShow: 1
+        slidesToShow: 4
       }
 
     }]
