@@ -101,7 +101,15 @@
              return element.ocean.id === parseInt(oceanId)
            })
            // debugger
-           //seaLifeContainer.innerHTML = ""
+           seaLifeContainer.innerHTML =
+           `<span></span>
+          <span></span>
+          <span></span>
+         <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>`
            renderAllSeaLife(oceanTank, filtered)
 
            //filteredCreatures.creatures = filtered
@@ -205,7 +213,8 @@
 
   function renderInfoCard(infoCard, creature){
     const seaCardName = document.createElement("p")
-       seaCardName.innerHTML = `You picked: ${creature.name}`
+       seaCardName.innerHTML = `You picked: ${creature.name}.
+        <br><br>Description: ${creature.description}`
   //   let articleTag = document.createElement("article")
   //   seaCard.append(articleTag)
   //   let newElement = document.createElement("div")
