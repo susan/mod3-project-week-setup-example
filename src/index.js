@@ -87,7 +87,15 @@
              return element.ocean.id === parseInt(oceanId)
            })
            // debugger
-           //seaLifeContainer.innerHTML = ""
+           seaLifeContainer.innerHTML =
+           `<span></span>
+          <span></span>
+          <span></span>
+         <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>`
            renderAllSeaLife(oceanTank, filtered)
 
            //filteredCreatures.creatures = filtered

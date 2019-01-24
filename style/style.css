@@ -425,9 +425,11 @@ h5{
   border-radius: 15px 50px;
   border: 30px solid transparent;
 /* padding: 15px; */
-
-
 }
+h5 span{
+ font-size: 17px;
+}
+
 /*-----------------*/
 /*flex items setup */
 /*-----------------*/
