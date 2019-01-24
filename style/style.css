@@ -28,7 +28,6 @@ seaLife-bar {
 }
 
 
-
 input:focus {
   outline: none;
 }
@@ -425,9 +424,12 @@ h5{
   border-radius: 15px 50px;
   border: 30px solid transparent;
 /* padding: 15px; */
-
-
 }
+
+h5 span{
+  font-size: 17px;
+ }
+
 /*-----------------*/
 /*flex items setup */
 /*-----------------*/
@@ -556,7 +558,37 @@ div#ocean-3.slick-slider {
   background-color: pink;
 }
 
-/*seaCreature speed and size in tank*/
+.btn {
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+ }
+
+
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+.delete-btn {
+   background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+}
+.favorite-btn {
+
+    background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+}
+
+.speed-btn {
+  background-image: linear-gradient(to right, #52C6A7 0%, #8fd3f4 51%, #52C6A7 100%);
+  /*background-image: linear-gradient(to right, #8FE9D1 0%, #8fd3f4 51%, #8FE9D1 100%);*/
+}
+/* seaCreature size and speed */
 
 .slow {
   width: 100px;
