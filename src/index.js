@@ -298,7 +298,7 @@ $.fn.randomOrder = function(animate) {
     var zIndex = getRandomInt(0,13);
 
     // Animation Duration
-    if(animate) var dur = 2000;
+    if(animate) var dur = 1000;
     else var dur = 0;
 
     image.animate({left: xPos, top: yPos, 'z-index': zIndex}, dur);
