@@ -554,3 +554,25 @@ div#ocean-3.slick-slider {
 .info-card {
   background-color: pink;
 }
+
+/*seaCreature speed and size in tank*/
+
+.slow {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  overflow: hidden;
+}
+.medium {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  overflow: hidden;
+}
+
+.fast {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  overflow: hidden;
+}

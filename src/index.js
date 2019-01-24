@@ -148,7 +148,23 @@
            renderInfoCard(infoCard, data);
            textButton(event.target, data)
         })
+      }
 
+     else if (event.target.className === "speed-btn"){
+
+       let id = event.target.dataset.id
+
+       let selected = oceanTank.querySelector(`#creature-${id}`)
+
+          if (selected.className === "slow") {
+            selected.className = "medium"
+          }
+         else if (selected.className === "medium") {
+            selected.className = "fast"
+          }
+         else if (selected.className === "fast") {
+            selected.className = "slow"
+          }
       }//end of else if statement
   }
 }
@@ -191,18 +207,18 @@
       isMyFavorite.innerHTML = textButton(isMyFavorite, creature);
       isMyFavorite.dataset.id = creature.id
 
-    const goFaster = document.createElement("button");
-      goFaster.className = "slow"
-      goFaster.innerHTML =  "make me go faster!"
-
-
      const deleteButton = document.createElement("button")
        deleteButton.className = "delete-btn"
-       deleteButton.innerHTML = "remove from Ocean Tank"
+       deleteButton.innerHTML = "Remove me from Ocean Tank"
        deleteButton.dataset.value = "delete"
        deleteButton.dataset.id = creature.id
 
-     infoCard.append(seaCardName, isMyFavorite, goFaster, deleteButton)
+       const goFaster = document.createElement("button");
+      goFaster.className = "speed-btn"
+      goFaster.innerHTML =  "Change my speed, change my size too!"
+      goFaster.dataset.id = creature.id
+
+     infoCard.append(seaCardName, isMyFavorite, deleteButton, goFaster)
     }
 
   function renderAllSeaLife(oceanTank, seaLife){
@@ -217,7 +233,7 @@
       button.dataset.value = true;
       }
     else {
-      button.innerHTML = "Choose Favorite!"
+      button.innerHTML = "Choose me as Your Favorite!"
       button.dataset.value = false;
     }
     return button.innerHTML;
@@ -263,3 +279,60 @@ responsive: [{
 
     }]
 });
+// ------------------------oceanTank-----------------------//
+function getRandomInt (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+$.fn.randomOrder = function(animate) {
+  this.each(function() {
+    var image = $(this);
+
+    // Viewport Dimensions
+    var vpHeight = $(window).height();
+    var vpWidth = $(window).width();
+
+    // Image Position
+    var xPos = getRandomInt(0, vpWidth - image.width());
+    var yPos = getRandomInt(0, vpHeight - image.height());
+    var zIndex = getRandomInt(0,13);
+
+    // Animation Duration
+    if(animate) var dur = 2000;
+    else var dur = 0;
+
+    image.animate({left: xPos, top: yPos, 'z-index': zIndex}, dur);
+  });
+};
+
+//Setup
+$('.slow').randomOrder(false);
+$('.slow').draggable({stack: "img"});
+
+
+// Change after 10 Seconds
+window.setInterval(function(){
+  $('.slow').randomOrder(true);
+}, 7000);
+
+//Setup
+$('.medium').randomOrder(false);
+$('.medium').draggable({stack: "img"});
+
+
+// Change after 10 Seconds
+window.setInterval(function(){
+  $('.medium').randomOrder(true);
+}, 2000);
+
+//Setup
+$('.fast').randomOrder(false);
+$('.fast').draggable({stack: "img"});
+
+
+// change after 10 Seconds
+window.setInterval(function(){
+  $('.fast').randomOrder(true);
+},500);
+
+
