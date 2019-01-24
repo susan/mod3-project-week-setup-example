@@ -64,7 +64,20 @@
 
       }//end of if
 
-    })
+    //    else if((event.target.className.includes("slick-arrow")) || (event.target.id.includes("slick-slide-control"))) {
+    //   // document.querySelector(`#logo`).innerHTML = ""
+    //     if(event.target.parentElement.id == "ocean-1"){
+    //     document.querySelector(`#listed`).innerHTML = "All Pacific SeaLife"
+    //   }
+    //     else if(event.target.parentElement.id == "ocean-2"){
+    //   document.querySelector(`#listed`).innerHTML = "All Atlantic SeaLife"
+    //   }
+    // else if(event.target.parentElement.id == "ocean-3"){
+    // document.querySelector(`#listed`).innerHTML = "All Indiana SeaLife"
+    // }
+    //   }
+  //
+   })
     // }
 
 
@@ -75,6 +88,7 @@
   //functions go here
   //putting in tank
   function seaLifeHandler(event, seaLifeURL, oceanTank, navBar, fullCarousel, filteredCfreatures) {
+    // debugger
     if(event.target.className === "ocean-image"){
       let oceanId = event.target.dataset.id
 
@@ -100,6 +114,17 @@
        fullCarousel.style.display = "none";
 
        viewedCarousel.style.display = "block";
+
+       if (oceanId == 1){
+         document.querySelector(`#listed`).innerText = "Pacific SeaLife (Click arrows to expand)"
+       }
+       else if (oceanId == 2){
+         document.querySelector(`#listed`).innerText = "Atlantic SeaLife (Click arrows to expand)"
+       }
+       else if (oceanId == 3){
+         document.querySelector(`#listed`).innerText = "Indian SeaLife (Click arrows to expand)"
+       }
+
 
       }//end of if
   }
@@ -262,6 +287,7 @@
 
 
 // ------------------------Carousel-----------------------//
+
 $('.slider2').slick({
 	dots: true,
   arrows: true,
@@ -305,6 +331,7 @@ $.fn.randomOrder = function(animate) {
   });
 };
 
+
 //Setup
 $('.slow').randomOrder(false);
 $('.slow').draggable({stack: "img"});
@@ -334,5 +361,3 @@ $('.fast').draggable({stack: "img"});
 window.setInterval(function(){
   $('.fast').randomOrder(true);
 },500);
-
-

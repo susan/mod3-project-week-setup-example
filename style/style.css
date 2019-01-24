@@ -428,6 +428,17 @@ h5{
 
 
 }
+
+span img{
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: -7px;
+}
+
+.logo{
+  border: none !important;
+}
 /*-----------------*/
 /*flex items setup */
 /*-----------------*/
