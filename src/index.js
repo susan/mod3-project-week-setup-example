@@ -245,7 +245,7 @@
 
     const goFaster = document.createElement("button");
       goFaster.className = "speed-btn"
-      goFaster.innerHTML =  "Change my speed, change my size too!"
+      goFaster.innerHTML =  "Change my size, and I'll move a little more too!"
       goFaster.dataset.id = creature.id
 
     const deleteButton = document.createElement("button")
@@ -335,7 +335,7 @@ $.fn.randomOrder = function(animate) {
     var zIndex = getRandomInt(0,13);
 
     // Animation Duration
-    if(animate) var dur = 1000;
+    if(animate) var dur = 3500;
     else var dur = 0;
 
     image.animate({left: xPos, top: yPos, 'z-index': zIndex}, dur);
@@ -361,7 +361,7 @@ $('.medium').draggable({stack: "img"});
 // Change after 10 Seconds
 window.setInterval(function(){
   $('.medium').randomOrder(true);
-}, 2000);
+}, 30);
 
 //Setup
 $('.fast').randomOrder(false);
@@ -371,4 +371,4 @@ $('.fast').draggable({stack: "img"});
 // change after 10 Seconds
 window.setInterval(function(){
   $('.fast').randomOrder(true);
-},500);
+},10);
