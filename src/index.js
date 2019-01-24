@@ -200,8 +200,7 @@
 
   function renderInfoCard(infoCard, creature){
     const seaCardName = document.createElement("p")
-       seaCardName.innerHTML = `You picked: ${creature.name}.
-        <br><br>Description: ${creature.description}`
+       seaCardName.innerHTML = `You picked: ${creature.name}`
   //   let articleTag = document.createElement("article")
   //   seaCard.append(articleTag)
   //   let newElement = document.createElement("div")
