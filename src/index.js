@@ -76,12 +76,12 @@
       document.querySelector(`#listed`).innerHTML = "All Atlantic SeaLife"
       }
     else if(event.target.parentElement.id == "ocean-3"){
-    document.querySelector(`#listed`).innerHTML = "All Indiana SeaLife"
+    document.querySelector(`#listed`).innerHTML = "All Indian SeaLife"
     }
       }
 
        else if(event.target.id.includes("slick-slide-control")){
-         debugger
+         //debugger
          if(event.target.parentElement.parentElement.parentElement.id == "ocean-1"){
          document.querySelector(`#listed`).innerHTML = "All Pacific SeaLife"
        }
@@ -105,7 +105,7 @@
 
   //functions go here
   //putting in tank
-  function seaLifeHandler(event, seaLifeURL, oceanTank, navBar, fullCarousel, filteredCfreatures) {
+  function seaLifeHandler(event, seaLifeURL, oceanTank, navBar, fullCarousel, filteredCreatures) {
     // debugger
     if(event.target.className === "ocean-image"){
       let oceanId = event.target.dataset.id
@@ -352,11 +352,11 @@ $.fn.randomOrder = function(animate) {
     var yPos = getRandomInt(0, vpHeight - image.height());
     var zIndex = getRandomInt(0,13);
 
-    // Animation Duration
+    // Animation Duration, how transitions render in css
     if(animate) var dur = 3500;
     else var dur = 0;
 
-    
+
 
     image.animate({left: xPos, top: yPos, 'z-index': zIndex}, dur);
   });
@@ -368,7 +368,7 @@ $('.slow').randomOrder(false);
 $('.slow').draggable({stack: "img"});
 
 
-// Change after 10 Seconds
+// Change after 10 Seconds, how often code runs
 window.setInterval(function(){
   $('.slow').randomOrder(true);
 }, 4000);
